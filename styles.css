@@ -7,11 +7,13 @@ body {
 }
 .container {
     display: flex;
+    flex-direction: row; 
     min-height: 100vh;
+    flex-wrap: nowrap;
 }
 .sidebar {
-    background: none; /* Transparent sidebar */
-    width: 35%;
+    background: none; 
+    width: 25%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -20,8 +22,9 @@ body {
     color: #ffffff;
 }
 .contents {
-    background-color: rgba(51, 51, 51, 0.8); /* Adds slight transparency */
+    background-color: rgba(51, 51, 51, 0.8);
     width: 75%;
+    box-sizing: border-box;
     overflow-y: auto;
 }
 .profilePhoto {
@@ -79,5 +82,6 @@ body {
 }
 .contents img.content-image {
     max-width: 100%;
-    height: 450px;
+    height: auto;
+    margin: 20px 0;
 }
