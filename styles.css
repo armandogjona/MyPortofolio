@@ -12,6 +12,10 @@ body {
     flex-wrap: nowrap;
 }
 .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
     background: none; 
     width: 25%;
     padding: 20px;
@@ -22,6 +26,7 @@ body {
     color: #ffffff;
 }
 .contents {
+    margin-left: auto;
     background-color: rgba(51, 51, 51, 0.8);
     width: 75%;
     box-sizing: border-box;
@@ -47,26 +52,20 @@ body {
 .profileName h1 {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #ffffff;
+    color: blue;
     margin-top: 20px;
     text-align: center;
-}
-.profileName h1:hover {
-    background: blue;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 .CV-button{
     background: blue;
     color: white;  
 }
 .CV-button:hover {
-    background: rgb(0, 165, 253);
+    background: rgba(45, 43, 85, 1);
     color: white;
 }
 .navbar {
-    background-color: rgba(51, 51, 51, 0.8); /* Adds slight transparency */
+    background-color: rgba(51, 51, 51, 0.8);
     padding: 40px;
     text-align: center;
 }
@@ -84,4 +83,83 @@ body {
     max-width: 100%;
     height: auto;
     margin: 20px 0;
+}
+#aboutMe {
+    background: rgba(45, 43, 85, 1);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#aboutMe h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #e1bb04; 
+}
+
+#aboutMe p, a {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+#aboutMe strong {
+    color: #4da6ff;
+    font-size: 0.9em;
+    line-height: 1.6; 
+}
+#aboutMe a:hover{
+    color: #e1bb04; 
+}
+#projects {
+    background: rgba(45, 43, 85, 1);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    margin-top: 100px;
+}
+#projects h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #e1bb04; 
+}
+#projects img{
+    max-width: 100%;
+}
+#education {
+    background: rgba(45, 43, 85, 1);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    margin-top: 100px;
+}
+#education h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #e1bb04; 
+}
+#education p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+}
+#education a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+#education a:hover {
+    color: #e1bb04;
 }
