@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Desktop Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armando Gjona - .NET Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mediaQuery.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("nZxg3xG99MTzthTL_"); // Your EmailJS user ID
+        })();
+    </script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
-
             <div class="profilePhoto">
                 <img src="images/profilePhoto.jpg" alt="Profile Picture"> 
             </div>
@@ -19,19 +28,19 @@
               <p>.NET Developer | Passionate About Tech</p>
             </div>
 
-            <button class="CV-button" style="width: 100px; height: 30px;">Download CV</button>
-
+            <a href="files/ArmandoGjonaCV.docx" download>
+                <button class="CV-button" style="width: 100px; height: 30px;">Download CV</button>
+            </a>
         </div>
 
         <div class="contents">
-
             <div class="navbar">
                 <a href="#home" class="active">HOME</a>
                 <a href="#aboutMe">ABOUT ME</a>
                 <a href="#projects">PROJECTS</a>
                 <a href="#education">EDUCATION</a>
-                <a href="contact.html">CONTACT</a>
-                <a href="#">BLOG</a>
+                <a href="#contact">CONTACT</a>
+                <a href="blog.html">BLOG</a>
             </div>
 
             <div id="home">
@@ -71,9 +80,42 @@
                     <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white" alt="Bootstrap" style="margin: 5px;" /><br><br>
                     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=armandogjona&theme=shades-of-purple&hide_border=false&include_all_commits=false&count_private=false&layout=compact" width="100%" />
             </div>
+
+            <div id="contact">
+                <h3>Contact Me</h3>
+                <form id="contact-form" class="contact-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            
+                    <button type="submit" class="CV-button">Send Message</button>
+                </form>
+            </div>
             
         </div>
     </div>
 
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            sendMail(); 
+        });
+
+        function sendMail() {
+            emailjs.sendForm('service_f8c0pnj', 'template_nk4iq3u', document.getElementById('contact-form')) 
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Message sent successfully!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send message. Please try again later.');
+                });
+        }
+    </script>
 </body>
 </html>

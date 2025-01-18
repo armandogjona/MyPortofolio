@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: url('https://static.wikia.nocookie.net/omniversal-battlefield/images/1/15/Haclo.gif/revision/latest?cb=20200105053245') no-repeat center center fixed;
+    background: url('backgroundgif.gif') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
 }
@@ -162,4 +162,56 @@ body {
 }
 #education a:hover {
     color: #e1bb04;
+}
+#contact {
+    background: rgba(45, 43, 85, 1);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#contact h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #e1bb04;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;  
+    font-size: 0.9em;  
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    box-sizing: border-box; 
+    margin: 0; 
+}
+
+.contact-form button {
+    background: blue;
+    color: white;
+    padding: 8px 15px;  
+    font-size: 1em; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: rgba(45, 43, 85, 1);
 }
