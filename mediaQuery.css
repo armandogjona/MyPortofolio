@@ -1,16 +1,27 @@
 @media (max-width: 576px) {
-    .sidebar, .contents {
+    .container {
+        flex-direction: column; 
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        position: relative; 
+        order: -1;
+    }
+
+    .contents {
         width: 100%;
         padding: 10px;
     }
 
     .profilePhoto {
-        width: 120px;
-        height: 120px;
+        width: 200px;
+        height: 200px;
     }
 
     .profileName h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .CV-button {
@@ -24,18 +35,29 @@
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
-    .sidebar, .contents {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        position: relative; 
+        order: -1; 
+    }
+
+    .contents {
         width: 100%;
         padding: 10px;
     }
 
     .profilePhoto {
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
     }
 
     .profileName h1 {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 
     .CV-button {
@@ -49,25 +71,31 @@
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        flex-direction: column; 
+    }
+
     .sidebar {
-        width: 30%;
+        width: 100%;
+        position: relative; 
+        order: -1; 
     }
 
     .contents {
-        width: 70%;
+        width: 100%;
     }
 
     .profilePhoto {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
     }
 
     .profileName h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .CV-button {
-        padding: 10px 20px;
+        padding: 8px 20px;
         font-size: 0.8rem;
     }
 
@@ -79,6 +107,7 @@
 @media (min-width: 992px) {
     .sidebar {
         width: 35%;
+
     }
 
     .contents {
