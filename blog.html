@@ -7,6 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="blog">
+        <div>
+            <h1>MVC pattern</h1>
+            <p>The Model-View-Controller (MVC) architectural pattern separates an application into three main groups of components: Models, Views, and Controllers. This pattern helps to achieve separation of concerns. Using this pattern, user requests are routed to a Controller which is responsible for working with the Model to perform user actions and/or retrieve results of queries. The Controller chooses the View to display to the user, and provides it with any Model data it requires. The following diagram shows the three main components and which ones reference the others:</p>
+            <img src="images/mvc.png" alt="MVC pattern">
+            <p>This delineation of responsibilities helps you scale the application in terms of complexity because it's easier to code, debug, and test something (model, view, or controller) that has a single job. It's more difficult to update, test, and debug code that has dependencies spread across two or more of these three areas. For example, user interface logic tends to change more frequently than business logic. If presentation code and business logic are combined in a single object, an object containing business logic must be modified every time the user interface is changed. This often introduces errors and requires the retesting of business logic after every minimal user interface change.</p>
+            <h3>Model Responsibilities</h3>
+            <p>The Model in an MVC application represents the state of the application and any business logic or operations that should be performed by it. Business logic should be encapsulated in the model, along with any implementation logic for persisting the state of the application. Strongly-typed views typically use ViewModel types designed to contain the data to display on that view. The controller creates and populates these ViewModel instances from the model.</p>
+            <h3>View Responsibilities</h3>
+            <p>Views are responsible for presenting content through the user interface. They use the Razor view engine to embed .NET code in HTML markup. There should be minimal logic within views, and any logic in them should relate to presenting content. If you find the need to perform a great deal of logic in view files in order to display data from a complex model, consider using a View Component, ViewModel, or view template to simplify the view.            </p>
+            <h3>Controller Responsibilities</h3>
+            <p>Controllers are the components that handle user input, work with the model, and ultimately select a view to render that displays UI. In an MVC application, the view only displays information; the controller handles and responds to user input and interaction. For example, the controller handles query-string values, and passes these values to the model, which in turn might use these values to query the database. The controller then passes the model to the view, which uses it to render the final UI.</p>
+            <h1>Why choose ASP.NET Core?</h1>
+            <p>Millions of developers use or have used ASP.NET 4.x to create web apps. ASP.NET Core is a redesign of ASP.NET 4.x, including architectural changes that result in a leaner, more modular framework.</p>
+            <ul><strong>ASP.NET Core provides the following benefits:</strong></ul>
+            <li>A unified story for building web UI and web APIs</li>
+            <li>Architected for testability</li>
+            <li>Razor Pages makes coding page-focused scenarios easier and more productive</li>
+            <li>Blazor lets you build interactive web UIs using C# instead of JavaScript</li>
+            <li>Ability to develop and run on Windows, macOS, and Linux</li>
+            <li>Open-source and community-focused</li>
+            <li>Integration of modern, client-side frameworks and development workflows</li>
+            <li>A cloud-ready environment-based configuration system</li>
+            <li>Built-in dependency injection</li>
+            <li>A lightweight, high-performance, and modular HTTP request pipeline</li>
+            <img src="images/aspnetmvc.jpg" alt="ASP.NET Core" style="margin-top: 20px;">
+            <a href="index.html"><button>Back</button></a>
+        </div>
+    </div>
 </body>
 </html>
